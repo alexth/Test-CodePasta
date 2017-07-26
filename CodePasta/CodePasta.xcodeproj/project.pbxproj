@@ -261,9 +261,9 @@
 		E51282DD1F28745B00D2D1A5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E51282DE1F28749800D2D1A5 /* Main.storyboard */,
-				E51282E01F2874F800D2D1A5 /* FeedViewController.swift */,
 				E51282E21F28759A00D2D1A5 /* CreatePastaViewController.swift */,
+				E51282E01F2874F800D2D1A5 /* FeedViewController.swift */,
+				E51282DE1F28749800D2D1A5 /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
