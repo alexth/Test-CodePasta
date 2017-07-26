@@ -20,8 +20,17 @@ class FeedViewController: UIViewController {
 
     // MARK: - View lifecycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateDataSource()
+    }
+
+    // MARK: - Util
+
+    private func updateDataSource() {
+        let databaseManager = DatabaseManager.shared
+        pastasArray = databaseManager.pastas()
+        feedTableView.reloadData()
     }
 }
 
@@ -31,15 +40,13 @@ extension FeedViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return pastasArray.count
-return 10
+        return pastasArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: dictionaryCellIdentifier, for: indexPath) 
-//        let pasta = pastasArray[indexPath.row]
-        // TODO : extend Pasta with name property
-//        cell.textLabel?.text = pasta.name
+        let pasta = pastasArray[indexPath.row]
+        cell.textLabel?.text = pasta.name
         return cell
     }
 }
