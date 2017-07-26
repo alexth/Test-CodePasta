@@ -8,29 +8,34 @@
 
 import Foundation
 import CoreData
+import PromiseKit
 
 extension DatabaseManager {
-    func createUpdateUser(name: String,
-                          userID: String,
-                          creationDate: Date) -> (user: User?, error: NSError?) {
-        let fetchResponse = fetchUser()
-        if let error = fetchResponse.error {
-            return (nil, error)
-        } else {
-            let user: User!
-            if let fetchedUser = fetchResponse.user {
-                user = fetchedUser
+    @discardableResult
+    func createUser(name: String,
+                    userID: String,
+                    creationDate: Date) -> Promise<User> {
+        return Promise { (fulfill, reject) -> Void in
+            let fetchResponse = fetchUser()
+            if let error = fetchResponse.error {
+                reject(error)
             } else {
-                user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
-                user.userID = userID
-            }
-            user.name = name
-            user.creationDate = creationDate as NSDate
-            do {
-                try managedObjectContext.save()
-                return (user, nil)
-            } catch {
-                return (nil, error as NSError)
+                let user: User!
+                if let fetchedUser = fetchResponse.user {
+                    user = fetchedUser
+                } else {
+                    user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
+                    user.userID = userID
+                    user.creationDate = creationDate as NSDate
+                }
+                user.name = name
+                do {
+                    try managedObjectContext.save()
+//                    print("User - \(user)")
+                    fulfill(user)
+                } catch {
+                    reject(error)
+                }
             }
         }
     }
@@ -41,7 +46,7 @@ extension DatabaseManager {
         do {
             usersArray = try managedObjectContext.fetch(fetchRequest)
         } catch let error as NSError {
-            // TODO: Handle issue properly
+            // TODO: Add adequate error handling
             print("ERROR! Fetch failed: \(error.localizedDescription)")
         }
         return usersArray
@@ -53,9 +58,7 @@ extension DatabaseManager {
         do {
             usersArray = try managedObjectContext.fetch(fetchRequest)
             if usersArray.count == 1 {
-                if let user = usersArray.first {
-                    return (user, nil)
-                }
+                return (usersArray.first!, nil)
             } else if usersArray.count == 0 {
                 return (nil, nil)
             } else {
@@ -64,7 +67,6 @@ extension DatabaseManager {
         } catch let error as NSError {
             return (nil, error)
         }
-        return (nil, nil)
     }
 
     fileprivate func userFetchRequest() -> NSFetchRequest<User> {
