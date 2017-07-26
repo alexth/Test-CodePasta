@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,36 +21,55 @@ class LoginViewController: UIViewController {
         nameTextField.becomeFirstResponder()
     }
 
+    // MARK: - Navigation and Data transfer
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    }
+
     // MARK: - Business logic
 
     fileprivate func handleLogin(name: String!,
                                  email: String!,
                                  password: String!) {
-        let userAPI: APIUser = NetworkManager.shared
-        userAPI.login(withName: name,
-                      email: email,
-                      password: password).then { responseDictionary -> Void in
-                        self.handleSuccessLogin(response: responseDictionary)
-        }.catch { error in
-            self.handle(error: error)
-        }
+        // TODO: Disabled until API will be available
+
+//        let userAPI: APIUser = NetworkManager.shared
+//        userAPI.login(withName: name,
+//                      email: email,
+//                      password: password).then { responseDictionary -> Void in
+//                        self.handleSuccessLogin(response: responseDictionary)
+//        }.catch { error in
+//            self.handle(error: error)
+//        }
+        // TODO: Only for test purposes, need to be removed ⬇︎
+        let testResponse = ["name" : name,
+                            "id" : "userID",
+                            "creationDate" : Date()] as [String : AnyObject]
+        self.handleSuccessLogin(response: testResponse)
     }
 
     fileprivate func handleSuccessLogin(response: [String : AnyObject]) {
         guard let name = response["name"] as? String,
-        let userID = response["id"] as? String,
-        let creationDate = response["creationDate"] as? Date // TODO: needs to be correctly handled
+            let userID = response["id"] as? String,
+            let creationDate = response["creationDate"] as? Date // TODO: needs to be correctly handled
             else {
                 let error = NSError(domain: "Server",
                                     code: 0,
                                     userInfo: [NSLocalizedDescriptionKey : "Server Data error"])
                 handle(error: error)
-            return
+                return
         }
         let databaseManager = DatabaseManager.shared
         databaseManager.createUser(name: name,
                                    userID: userID,
-                                   creationDate: creationDate)
+                                   creationDate: creationDate).then { user -> Void in
+        }.catch { error in
+            let error = NSError(domain: "Device",
+                                code: 0,
+                                userInfo: [NSLocalizedDescriptionKey : "Device Data error"])
+            self.handle(error: error)
+        }
     }
 
     fileprivate func handle(error: Error) {
