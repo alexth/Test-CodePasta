@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282791F28608900D2D1A5 /* AppDelegate.swift */; };
-		E512827C1F28608900D2D1A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512827B1F28608900D2D1A5 /* ViewController.swift */; };
-		E512827F1F28608A00D2D1A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E512827D1F28608A00D2D1A5 /* Main.storyboard */; };
-		E51282821F28608A00D2D1A5 /* CodePasta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51282801F28608A00D2D1A5 /* CodePasta.xcdatamodeld */; };
 		E51282841F28608A00D2D1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51282831F28608A00D2D1A5 /* Assets.xcassets */; };
 		E51282871F28608A00D2D1A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51282851F28608A00D2D1A5 /* LaunchScreen.storyboard */; };
 		E51282921F28608A00D2D1A5 /* CodePastaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282911F28608A00D2D1A5 /* CodePastaTests.swift */; };
 		E512829D1F28608A00D2D1A5 /* CodePastaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512829C1F28608A00D2D1A5 /* CodePastaUITests.swift */; };
+		E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,18 +35,16 @@
 /* Begin PBXFileReference section */
 		E51282761F28608900D2D1A5 /* CodePasta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodePasta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51282791F28608900D2D1A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E512827B1F28608900D2D1A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E512827E1F28608A00D2D1A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E51282811F28608A00D2D1A5 /* CodePasta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodePasta.xcdatamodel; sourceTree = "<group>"; };
-		E51282831F28608A00D2D1A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E51282831F28608A00D2D1A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E51282861F28608A00D2D1A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E51282881F28608A00D2D1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E51282881F28608A00D2D1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		E512828D1F28608A00D2D1A5 /* CodePastaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodePastaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51282911F28608A00D2D1A5 /* CodePastaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePastaTests.swift; sourceTree = "<group>"; };
 		E51282931F28608A00D2D1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E51282981F28608A00D2D1A5 /* CodePastaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodePastaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E512829C1F28608A00D2D1A5 /* CodePastaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePastaUITests.swift; sourceTree = "<group>"; };
 		E512829E1F28608A00D2D1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E51282AF1F2864FA00D2D1A5 /* CodePasta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodePasta.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				E51282791F28608900D2D1A5 /* AppDelegate.swift */,
-				E512827B1F28608900D2D1A5 /* ViewController.swift */,
-				E512827D1F28608A00D2D1A5 /* Main.storyboard */,
-				E51282831F28608A00D2D1A5 /* Assets.xcassets */,
-				E51282851F28608A00D2D1A5 /* LaunchScreen.storyboard */,
-				E51282881F28608A00D2D1A5 /* Info.plist */,
-				E51282801F28608A00D2D1A5 /* CodePasta.xcdatamodeld */,
+				E51282AC1F2863F000D2D1A5 /* Flows */,
+				E51282AB1F28639D00D2D1A5 /* Model */,
+				E51282AA1F28637A00D2D1A5 /* Network */,
+				E51282AD1F28641E00D2D1A5 /* Resources */,
 			);
 			path = CodePasta;
 			sourceTree = "<group>";
@@ -126,6 +120,46 @@
 				E512829E1F28608A00D2D1A5 /* Info.plist */,
 			);
 			path = CodePastaUITests;
+			sourceTree = "<group>";
+		};
+		E51282AA1F28637A00D2D1A5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E51282AB1F28639D00D2D1A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E51282AC1F2863F000D2D1A5 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				E51282B11F28659800D2D1A5 /* Login */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		E51282AD1F28641E00D2D1A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E51282831F28608A00D2D1A5 /* Assets.xcassets */,
+				E51282851F28608A00D2D1A5 /* LaunchScreen.storyboard */,
+				E51282881F28608A00D2D1A5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E51282B11F28659800D2D1A5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +274,6 @@
 			files = (
 				E51282871F28608A00D2D1A5 /* LaunchScreen.storyboard in Resources */,
 				E51282841F28608A00D2D1A5 /* Assets.xcassets in Resources */,
-				E512827F1F28608A00D2D1A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E512827C1F28608900D2D1A5 /* ViewController.swift in Sources */,
 				E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */,
-				E51282821F28608A00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
+				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,20 +335,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E512827D1F28608A00D2D1A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E512827E1F28608A00D2D1A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E51282851F28608A00D2D1A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E51282861F28608A00D2D1A5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -540,12 +565,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E51282801F28608A00D2D1A5 /* CodePasta.xcdatamodeld */ = {
+		E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E51282811F28608A00D2D1A5 /* CodePasta.xcdatamodel */,
+				E51282AF1F2864FA00D2D1A5 /* CodePasta.xcdatamodel */,
 			);
-			currentVersion = E51282811F28608A00D2D1A5 /* CodePasta.xcdatamodel */;
+			currentVersion = E51282AF1F2864FA00D2D1A5 /* CodePasta.xcdatamodel */;
 			path = CodePasta.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
