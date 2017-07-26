@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate let databaseManager = DatabaseManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        loadAppropriateStoryboard()
         return true
     }
 
@@ -28,5 +29,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         databaseManager.saveContext()
+    }
+}
+
+fileprivate extension AppDelegate {
+    fileprivate func loadAppropriateStoryboard() {
+        if databaseManager.users().count != 0 {
+            let mainStoryboard =  UIStoryboard(name: "Main", bundle: nil)
+            let mnc = mainStoryboard.instantiateViewController(withIdentifier : "MainTabBarController") as! UITabBarController
+            window?.rootViewController = mnc
+        } else {
+            let seriesStoryboard =  UIStoryboard(name: "Login", bundle: nil)
+            let snc = seriesStoryboard.instantiateViewController(withIdentifier : "LoginViewController") as! LoginViewController
+            window?.rootViewController = snc
+        }
     }
 }
