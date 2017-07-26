@@ -29,6 +29,11 @@ class CreatePastaViewController: UIViewController, ToastViewDelegate {
         nameTextField.becomeFirstResponder()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cleanupFields()
+    }
+
     // MARK: - Actions
 
     @IBAction func savePasta(button: UIButton) {
@@ -93,6 +98,11 @@ class CreatePastaViewController: UIViewController, ToastViewDelegate {
                                        selector: #selector(keyboardWillShow(notification:)),
                                        name:NSNotification.Name.UIKeyboardWillShow,
                                        object: nil)
+    }
+
+    private func cleanupFields() {
+        nameTextField.text = nil
+        pastaTextView.text = nil
     }
 }
 
