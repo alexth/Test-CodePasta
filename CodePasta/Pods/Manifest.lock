@@ -10,13 +10,16 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.2.2):
     - PromiseKit/CorePromise
+  - SwiftMessages (3.4.0)
 
 DEPENDENCIES:
   - PromiseKit (~> 4.0)
+  - SwiftMessages
 
 SPEC CHECKSUMS:
   PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
+  SwiftMessages: e20aa1557fde1525ea369361bec4943cc0d08e7c
 
-PODFILE CHECKSUM: 2c463399e13bd1d243dbd7cccfcc3a9244330c4c
+PODFILE CHECKSUM: cedc9842749518af3d65e395fd3d5bf4a229f010
 
 COCOAPODS: 1.1.1

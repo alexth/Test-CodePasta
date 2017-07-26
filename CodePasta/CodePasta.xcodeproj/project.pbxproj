@@ -176,6 +176,7 @@
 				E51282AB1F28639D00D2D1A5 /* Model */,
 				E51282AA1F28637A00D2D1A5 /* Network */,
 				E51282AD1F28641E00D2D1A5 /* Resources */,
+				E5B9224B1F28CB0F001ED0A4 /* Utils */,
 			);
 			path = CodePasta;
 			sourceTree = "<group>";
@@ -310,6 +311,13 @@
 				E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */,
 			);
 			name = "DatabaseManager+Pasta";
+			sourceTree = "<group>";
+		};
+		E5B9224B1F28CB0F001ED0A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

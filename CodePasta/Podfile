@@ -3,7 +3,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'CodePasta' do
-  pod 'PromiseKit', '~> 4.0'
+   pod 'PromiseKit', '~> 4.0'
+   pod 'SwiftMessages'
 
   target 'CodePastaTests' do
     inherit! :search_paths
