@@ -1,0 +1,6 @@
+framework module Pods_CodePastaUITests {
+  umbrella header "Pods-CodePastaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

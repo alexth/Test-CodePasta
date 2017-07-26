@@ -1,0 +1,6 @@
+framework module Pods_CodePasta {
+  umbrella header "Pods-CodePasta-umbrella.h"
+
+  export *
+  module * { export * }
+}

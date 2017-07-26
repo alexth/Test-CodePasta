@@ -1,0 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+target 'CodePasta' do
+  pod 'PromiseKit', '~> 4.0'
+
+  target 'CodePastaTests' do
+    inherit! :search_paths
+  end
+
+  target 'CodePastaUITests' do
+    inherit! :search_paths
+  end
+
+end
