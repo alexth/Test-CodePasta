@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
+    fileprivate let toMainSegue = "toMain"
+
     // MARK: - View lifecycle
 
     override func viewDidAppear(_ animated: Bool) {
@@ -64,6 +66,7 @@ class LoginViewController: UIViewController {
         databaseManager.createUser(name: name,
                                    userID: userID,
                                    creationDate: creationDate).then { user -> Void in
+                                    self.performSegue(withIdentifier: self.toMainSegue, sender: self)
         }.catch { error in
             let error = NSError(domain: "Device",
                                 code: 0,

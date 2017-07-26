@@ -65,5 +65,13 @@
             </objects>
             <point key="canvasLocation" x="-420" y="22"/>
         </scene>
+        <!--LoginViewController-->
+        <scene sceneID="aOH-2D-bkp">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoginViewController" storyboardName="Login" referencedIdentifier="LoginViewController" id="bUw-mS-yoi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2FI-IH-SZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1238" y="21"/>
+        </scene>
     </scenes>
 </document>

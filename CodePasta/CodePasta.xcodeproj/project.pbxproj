@@ -16,7 +16,6 @@
 		E51282921F28608A00D2D1A5 /* CodePastaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282911F28608A00D2D1A5 /* CodePastaTests.swift */; };
 		E512829D1F28608A00D2D1A5 /* CodePastaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E512829C1F28608A00D2D1A5 /* CodePastaUITests.swift */; };
 		E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */; };
-		E51282B31F2865E400D2D1A5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51282B21F2865E400D2D1A5 /* Login.storyboard */; };
 		E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282B41F28665D00D2D1A5 /* LoginViewController.swift */; };
 		E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */; };
 		E51282D71F28722F00D2D1A5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D11F28722F00D2D1A5 /* User+CoreDataClass.swift */; };
@@ -32,6 +31,7 @@
 		E5B9223A1F288367001ED0A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922391F288367001ED0A4 /* NetworkManager.swift */; };
 		E5B9223F1F28842C001ED0A4 /* APIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9223E1F28842C001ED0A4 /* APIUser.swift */; };
 		E5B922411F288B23001ED0A4 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922401F288B23001ED0A4 /* APIConfiguration.swift */; };
+		E5B922451F28AB3D001ED0A4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B922441F28AB3D001ED0A4 /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,6 @@
 		E512829C1F28608A00D2D1A5 /* CodePastaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePastaUITests.swift; sourceTree = "<group>"; };
 		E512829E1F28608A00D2D1A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E51282AF1F2864FA00D2D1A5 /* CodePasta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodePasta.xcdatamodel; sourceTree = "<group>"; };
-		E51282B21F2865E400D2D1A5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E51282B41F28665D00D2D1A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		E51282D11F28722F00D2D1A5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		E5B922391F288367001ED0A4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E5B9223E1F28842C001ED0A4 /* APIUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUser.swift; sourceTree = "<group>"; };
 		E5B922401F288B23001ED0A4 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		E5B922441F28AB3D001ED0A4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +239,8 @@
 		E51282B11F28659800D2D1A5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E51282B21F2865E400D2D1A5 /* Login.storyboard */,
 				E51282B41F28665D00D2D1A5 /* LoginViewController.swift */,
+				E5B922441F28AB3D001ED0A4 /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 			files = (
 				E51282871F28608A00D2D1A5 /* LaunchScreen.storyboard in Resources */,
 				E51282841F28608A00D2D1A5 /* Assets.xcassets in Resources */,
-				E51282B31F2865E400D2D1A5 /* Login.storyboard in Resources */,
+				E5B922451F28AB3D001ED0A4 /* Login.storyboard in Resources */,
 				E51282DF1F28749800D2D1A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
