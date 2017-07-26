@@ -1,5 +1,5 @@
 //
-//  ToastManager.swift
+//  ToastViewDelegate.swift
 //  CodePasta
 //
 //  Created by Alex Golub on 7/26/17.
@@ -9,12 +9,12 @@
 import Foundation
 import SwiftMessages
 
-protocol ToastManager {
+protocol ToastViewDelegate {
     func showError(text: String)
     func showInfo(text: String)
 }
 
-extension ToastManager {
+extension ToastViewDelegate {
     func showError(text: String) {
         let view = defaultView(text: text)
         view.configureTheme(.error)

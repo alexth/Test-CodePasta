@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreatePastaViewController: UIViewController {
+class CreatePastaViewController: UIViewController, ToastViewDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var pastaTextView: UITextView!
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
@@ -33,7 +33,7 @@ class CreatePastaViewController: UIViewController {
             let code = pastaTextView.text {
             savePasta(name: name, code: code)
         } else {
-            //TODO: Add error handling
+            showError(text: "Nothing to save")
         }
     }
 
@@ -47,8 +47,7 @@ class CreatePastaViewController: UIViewController {
                                  creationDate: creationDate).then { response -> Void in
                                     self.savePasta(name: name, code: code)
         }.catch { error in
-            //TODO: Add adequate error handling
-            print(error)
+            self.showError(text: error.localizedDescription)
         }
     }
 
@@ -63,9 +62,9 @@ class CreatePastaViewController: UIViewController {
                                               pastaID: "\(Int.randomInt(from: 0, to: 100000))", // TODO: test
                 creationDate: Date()) // TODO: test
             self.view.endEditing(true)
-            // TODO: Show success save
+            self.showInfo(text: "Saved!")
         } else {
-            // TODO: Show error
+            showError(text: "Saving Pasta error")
         }
     }
 
