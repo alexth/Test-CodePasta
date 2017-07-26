@@ -27,6 +27,8 @@
 		E51282E31F28759A00D2D1A5 /* CreatePastaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282E21F28759A00D2D1A5 /* CreatePastaViewController.swift */; };
 		E51282E61F2879D700D2D1A5 /* DatabaseManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282E51F2879D700D2D1A5 /* DatabaseManager+User.swift */; };
 		E5B9223A1F288367001ED0A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922391F288367001ED0A4 /* NetworkManager.swift */; };
+		E5B9223F1F28842C001ED0A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9223E1F28842C001ED0A4 /* User.swift */; };
+		E5B922411F288B23001ED0A4 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922401F288B23001ED0A4 /* APIConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		E51282E21F28759A00D2D1A5 /* CreatePastaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePastaViewController.swift; sourceTree = "<group>"; };
 		E51282E51F2879D700D2D1A5 /* DatabaseManager+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatabaseManager+User.swift"; sourceTree = "<group>"; };
 		E5B922391F288367001ED0A4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E5B9223E1F28842C001ED0A4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E5B922401F288B23001ED0A4 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +157,11 @@
 		E51282AA1F28637A00D2D1A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5B922401F288B23001ED0A4 /* APIConfiguration.swift */,
 				E5B922391F288367001ED0A4 /* NetworkManager.swift */,
+				E5B9223D1F2883EA001ED0A4 /* Comment */,
+				E5B9223C1F2883E3001ED0A4 /* Pasta */,
+				E5B9223B1F2883D8001ED0A4 /* User */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -226,6 +234,28 @@
 				E51282E51F2879D700D2D1A5 /* DatabaseManager+User.swift */,
 			);
 			path = "DatabaseManager+User";
+			sourceTree = "<group>";
+		};
+		E5B9223B1F2883D8001ED0A4 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				E5B9223E1F28842C001ED0A4 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		E5B9223C1F2883E3001ED0A4 /* Pasta */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pasta;
+			sourceTree = "<group>";
+		};
+		E5B9223D1F2883EA001ED0A4 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Comment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,11 +399,13 @@
 				E51282DB1F28722F00D2D1A5 /* Comment+CoreDataClass.swift in Sources */,
 				E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */,
 				E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */,
+				E5B922411F288B23001ED0A4 /* APIConfiguration.swift in Sources */,
 				E51282D81F28722F00D2D1A5 /* User+CoreDataProperties.swift in Sources */,
 				E51282DC1F28722F00D2D1A5 /* Comment+CoreDataProperties.swift in Sources */,
 				E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */,
 				E51282E31F28759A00D2D1A5 /* CreatePastaViewController.swift in Sources */,
 				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
+				E5B9223F1F28842C001ED0A4 /* User.swift in Sources */,
 				E51282E11F2874F800D2D1A5 /* FeedViewController.swift in Sources */,
 				E51282E61F2879D700D2D1A5 /* DatabaseManager+User.swift in Sources */,
 				E5B9223A1F288367001ED0A4 /* NetworkManager.swift in Sources */,
