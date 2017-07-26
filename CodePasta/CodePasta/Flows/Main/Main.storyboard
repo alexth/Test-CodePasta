@@ -119,11 +119,60 @@
                     <navigationItem key="navigationItem" title="Feed" id="41p-d5-5bT"/>
                     <connections>
                         <outlet property="feedTableView" destination="Irh-2A-Ht8" id="Gte-t4-CjZ"/>
+                        <segue destination="M3T-SN-X8X" kind="show" identifier="toViewPasta" id="rMn-Gk-2ld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT0-oK-sra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1471.2" y="-305.39730134932535"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="STj-17-pkj">
+            <objects>
+                <viewController id="M3T-SN-X8X" customClass="EditViewController" customModule="CodePasta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JlL-cp-eNV"/>
+                        <viewControllerLayoutGuide type="bottom" id="TAn-EG-szJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uWd-Md-O4d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-2P-HG4">
+                                <rect key="frame" x="16" y="84" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="O4S-K6-zfL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nh3-bo-HZN">
+                                <rect key="frame" x="16" y="113" width="343" height="485"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nh3-bo-HZN" secondAttribute="trailing" constant="16" id="4sX-Q3-u7D"/>
+                            <constraint firstItem="5cL-2P-HG4" firstAttribute="trailing" secondItem="uWd-Md-O4d" secondAttribute="trailingMargin" id="6AY-ev-Czc"/>
+                            <constraint firstItem="TAn-EG-szJ" firstAttribute="top" secondItem="nh3-bo-HZN" secondAttribute="bottom" constant="20" id="PuD-UD-qI3"/>
+                            <constraint firstItem="5cL-2P-HG4" firstAttribute="top" secondItem="JlL-cp-eNV" secondAttribute="bottom" constant="20" id="eLq-fL-T3x"/>
+                            <constraint firstItem="5cL-2P-HG4" firstAttribute="leading" secondItem="uWd-Md-O4d" secondAttribute="leadingMargin" id="g6G-SW-MxA"/>
+                            <constraint firstItem="nh3-bo-HZN" firstAttribute="leading" secondItem="uWd-Md-O4d" secondAttribute="leading" constant="16" id="hJs-0X-Fao"/>
+                            <constraint firstItem="nh3-bo-HZN" firstAttribute="top" secondItem="5cL-2P-HG4" secondAttribute="bottom" constant="8" id="r8J-xg-SV3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="5cL-2P-HG4" id="1A6-QO-Dud"/>
+                        <outlet property="pastaLabel" destination="nh3-bo-HZN" id="cPf-EQ-GXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQA-tg-4I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328.8000000000002" y="-305.39730134932535"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pNy-5z-Z3B">

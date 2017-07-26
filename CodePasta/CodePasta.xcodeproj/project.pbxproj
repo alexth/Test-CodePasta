@@ -35,6 +35,7 @@
 		E5B922471F28B7C5001ED0A4 /* APIPasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922461F28B7C5001ED0A4 /* APIPasta.swift */; };
 		E5B9224A1F28B94B001ED0A4 /* DatabaseManager+Pasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */; };
 		E5B9224D1F28CBF7001ED0A4 /* ToastViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9224C1F28CBF7001ED0A4 /* ToastViewDelegate.swift */; };
+		E5B9224F1F28DD37001ED0A4 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9224E1F28DD37001ED0A4 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		E5B922461F28B7C5001ED0A4 /* APIPasta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPasta.swift; sourceTree = "<group>"; };
 		E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseManager+Pasta.swift"; path = "DatabaseManager+Pasta/DatabaseManager+Pasta.swift"; sourceTree = "<group>"; };
 		E5B9224C1F28CBF7001ED0A4 /* ToastViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastViewDelegate.swift; sourceTree = "<group>"; };
+		E5B9224E1F28DD37001ED0A4 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				E51282E21F28759A00D2D1A5 /* CreatePastaViewController.swift */,
+				E5B9224E1F28DD37001ED0A4 /* EditViewController.swift */,
 				E51282E01F2874F800D2D1A5 /* FeedViewController.swift */,
 				E51282DE1F28749800D2D1A5 /* Main.storyboard */,
 			);
@@ -608,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B9224F1F28DD37001ED0A4 /* EditViewController.swift in Sources */,
 				E51282DB1F28722F00D2D1A5 /* Comment+CoreDataClass.swift in Sources */,
 				E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */,
 				E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */,

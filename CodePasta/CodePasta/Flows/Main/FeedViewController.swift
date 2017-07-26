@@ -14,16 +14,28 @@ class FeedViewController: UIViewController {
     fileprivate var pastasArray: [Pasta]!
 
     fileprivate let dictionaryCellIdentifier = "feedCell"
+    fileprivate let toViewPastaSegue = "toViewPasta"
     fileprivate let feedTableViewNumberOfSections: Int = 1
     fileprivate let feedTableViewCellHeight: CGFloat = 50.0
     fileprivate let feedTableViewHeaderFooterHeight: CGFloat = 0.01
     fileprivate let fetchLimit: Int = 20
+    fileprivate var selectedPasta: Pasta!
 
     // MARK: - View lifecycle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateDataSource()
+    }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == toViewPastaSegue {
+            if let destination = segue.destination as? EditViewController {
+                destination.pasta = selectedPasta
+            }
+        }
     }
 
     // MARK: - Util
@@ -53,6 +65,11 @@ extension FeedViewController: UITableViewDataSource {
 }
 
 extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPasta = pastasArray[indexPath.row]
+        performSegue(withIdentifier: toViewPastaSegue, sender: self)
+    }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return feedTableViewHeaderFooterHeight
     }
