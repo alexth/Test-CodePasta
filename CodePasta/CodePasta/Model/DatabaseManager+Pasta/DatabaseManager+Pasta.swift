@@ -18,13 +18,13 @@ extension DatabaseManager {
                            creationDate: Date,
                            updateDate: Date) -> Promise<Pasta> {
         return Promise { (fulfill, reject) -> Void in
-            let fetchResponse = fetchPasta()
+            let fetchResponse = fetchPasta(pastaID: pastaID)
             if let error = fetchResponse.error {
                 reject(error)
             } else {
                 let pasta: Pasta!
-                if let fetchedpasta = fetchResponse.pasta {
-                    pasta = fetchedpasta
+                if let fetchedPasta = fetchResponse.pasta {
+                    pasta = fetchedPasta
                 } else {
                     pasta = NSEntityDescription.insertNewObject(forEntityName: "Pasta", into: managedObjectContext) as! Pasta
                     pasta.pastaID = pastaID
@@ -44,9 +44,10 @@ extension DatabaseManager {
         }
     }
 
-    func fetchPasta() -> (pasta: Pasta?, error: NSError?) {
+    func fetchPasta(pastaID: String) -> (pasta: Pasta?, error: NSError?) {
         var pastasArray = [Pasta]()
         let fetchRequest = pastaFetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "pastaID == \(pastaID)")
         do {
             pastasArray = try managedObjectContext.fetch(fetchRequest)
             if pastasArray.count == 1 {
