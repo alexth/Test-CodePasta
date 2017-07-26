@@ -31,7 +31,6 @@ extension DatabaseManager {
                 user.name = name
                 do {
                     try managedObjectContext.save()
-//                    print("User - \(user)")
                     fulfill(user)
                 } catch {
                     reject(error)

@@ -33,6 +33,7 @@
 		E5B922411F288B23001ED0A4 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922401F288B23001ED0A4 /* APIConfiguration.swift */; };
 		E5B922451F28AB3D001ED0A4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B922441F28AB3D001ED0A4 /* Login.storyboard */; };
 		E5B922471F28B7C5001ED0A4 /* APIPasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922461F28B7C5001ED0A4 /* APIPasta.swift */; };
+		E5B9224A1F28B94B001ED0A4 /* DatabaseManager+Pasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		E5B922401F288B23001ED0A4 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		E5B922441F28AB3D001ED0A4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E5B922461F28B7C5001ED0A4 /* APIPasta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPasta.swift; sourceTree = "<group>"; };
+		E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseManager+Pasta.swift"; path = "DatabaseManager+Pasta/DatabaseManager+Pasta.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				E51282B81F28711600D2D1A5 /* Entities */,
 				E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */,
 				E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */,
+				E5B922481F28B91F001ED0A4 /* DatabaseManager+Pasta */,
 				E51282E41F2878CE00D2D1A5 /* DatabaseManager+User */,
 			);
 			path = Model;
@@ -299,6 +302,14 @@
 			children = (
 			);
 			path = Comment;
+			sourceTree = "<group>";
+		};
+		E5B922481F28B91F001ED0A4 /* DatabaseManager+Pasta */ = {
+			isa = PBXGroup;
+			children = (
+				E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */,
+			);
+			name = "DatabaseManager+Pasta";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,6 +603,7 @@
 				E5B922411F288B23001ED0A4 /* APIConfiguration.swift in Sources */,
 				E51282D81F28722F00D2D1A5 /* User+CoreDataProperties.swift in Sources */,
 				E51282DC1F28722F00D2D1A5 /* Comment+CoreDataProperties.swift in Sources */,
+				E5B9224A1F28B94B001ED0A4 /* DatabaseManager+Pasta.swift in Sources */,
 				E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */,
 				E51282E31F28759A00D2D1A5 /* CreatePastaViewController.swift in Sources */,
 				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
