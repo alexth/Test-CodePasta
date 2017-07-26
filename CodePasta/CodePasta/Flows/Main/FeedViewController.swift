@@ -17,6 +17,7 @@ class FeedViewController: UIViewController {
     fileprivate let feedTableViewNumberOfSections: Int = 1
     fileprivate let feedTableViewCellHeight: CGFloat = 50.0
     fileprivate let feedTableViewHeaderFooterHeight: CGFloat = 0.01
+    fileprivate let fetchLimit: Int = 20
 
     // MARK: - View lifecycle
 
@@ -29,7 +30,7 @@ class FeedViewController: UIViewController {
 
     private func updateDataSource() {
         let databaseManager = DatabaseManager.shared
-        pastasArray = databaseManager.pastas()
+        pastasArray = databaseManager.pastas(fetchLimit: fetchLimit)
         feedTableView.reloadData()
     }
 }

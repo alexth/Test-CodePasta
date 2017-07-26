@@ -61,9 +61,10 @@ extension DatabaseManager {
         }
     }
 
-    func pastas() -> [Pasta] {
+    func pastas(fetchLimit: Int) -> [Pasta] {
         var pastasArray = [Pasta]()
         let fetchRequest = pastaFetchRequest()
+        fetchRequest.fetchLimit = fetchLimit
         do {
             pastasArray = try managedObjectContext.fetch(fetchRequest)
         } catch let error as NSError {
