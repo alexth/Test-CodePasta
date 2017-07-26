@@ -11,7 +11,7 @@
         <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="pastaID" attributeType="String" syncable="YES"/>
-        <attribute name="updateDate" attributeType="String" syncable="YES"/>
+        <attribute name="updateDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="pasta" inverseEntity="Comment" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="pastas" inverseEntity="User" syncable="YES"/>
     </entity>

@@ -63,7 +63,8 @@ class CreatePastaViewController: UIViewController, ToastViewDelegate {
             databaseManager.createUpdatePasta(name: name,
                                               code: code,
                                               pastaID: "\(Int.randomInt(from: 0, to: 100000))", // TODO: test
-                creationDate: Date()) // TODO: test
+                creationDate: Date(), // TODO: Only for test
+                updateDate: Date()) // TODO: Only for test
             self.view.endEditing(true)
             self.showInfo(text: "Saved!")
         } else {

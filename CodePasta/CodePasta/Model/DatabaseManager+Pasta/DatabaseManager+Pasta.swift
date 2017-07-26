@@ -15,7 +15,8 @@ extension DatabaseManager {
     func createUpdatePasta(name: String,
                            code: String,
                            pastaID: String,
-                           creationDate: Date) -> Promise<Pasta> {
+                           creationDate: Date,
+                           updateDate: Date) -> Promise<Pasta> {
         return Promise { (fulfill, reject) -> Void in
             let fetchResponse = fetchPasta()
             if let error = fetchResponse.error {
@@ -31,6 +32,8 @@ extension DatabaseManager {
                 }
                 pasta.name = name
                 pasta.code = code
+                pasta.updateDate = updateDate as NSDate
+                pasta.user = fetchUser().user
                 do {
                     try managedObjectContext.save()
                     fulfill(pasta)
