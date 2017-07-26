@@ -23,12 +23,6 @@ class LoginViewController: UIViewController {
         nameTextField.becomeFirstResponder()
     }
 
-    // MARK: - Navigation and Data transfer
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-    }
-
     // MARK: - Business logic
 
     fileprivate func handleLogin(name: String!,

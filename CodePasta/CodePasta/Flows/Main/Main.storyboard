@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="1471.2" y="348.57571214392806"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Feed-->
         <scene sceneID="kew-jj-Ka9">
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="cyI-GI-eBV" customClass="FeedViewController" customModule="CodePasta" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,9 +39,38 @@
                     <view key="view" contentMode="scaleToFill" id="hJX-DB-ORa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Irh-2A-Ht8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" id="O3Q-dl-QeR">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O3Q-dl-QeR" id="4Y5-O2-Xfw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cyI-GI-eBV" id="LCh-Ym-HhN"/>
+                                    <outlet property="delegate" destination="cyI-GI-eBV" id="bDX-6T-fJe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Irh-2A-Ht8" firstAttribute="leading" secondItem="hJX-DB-ORa" secondAttribute="leading" id="B6D-lX-rxF"/>
+                            <constraint firstItem="Irh-2A-Ht8" firstAttribute="top" secondItem="hJX-DB-ORa" secondAttribute="top" id="f7v-H7-cXw"/>
+                            <constraint firstAttribute="trailing" secondItem="Irh-2A-Ht8" secondAttribute="trailing" id="fbv-SN-37M"/>
+                            <constraint firstAttribute="bottom" secondItem="Irh-2A-Ht8" secondAttribute="bottom" id="mRq-Gq-AWC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="41p-d5-5bT"/>
+                    <navigationItem key="navigationItem" title="Feed" id="41p-d5-5bT"/>
+                    <connections>
+                        <outlet property="feedTableView" destination="Irh-2A-Ht8" id="Gte-t4-CjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hT0-oK-sra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,27 +9,47 @@
 import UIKit
 
 class FeedViewController: UIViewController {
+    @IBOutlet weak var feedTableView: UITableView!
+
+    fileprivate var pastasArray: [Pasta]!
+
+    fileprivate let dictionaryCellIdentifier = "feedCell"
+    fileprivate let feedTableViewNumberOfSections: Int = 1
+    fileprivate let feedTableViewCellHeight: CGFloat = 50.0
+    fileprivate let feedTableViewHeaderFooterHeight: CGFloat = 0.01
+
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension FeedViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return feedTableViewNumberOfSections
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return pastasArray.count
+return 10
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: dictionaryCellIdentifier, for: indexPath) 
+//        let pasta = pastasArray[indexPath.row]
+        // TODO : extend Pasta with name property
+//        cell.textLabel?.text = pasta.name
+        return cell
     }
-    */
+}
 
+extension FeedViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return feedTableViewHeaderFooterHeight
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return feedTableViewHeaderFooterHeight
+    }
 }
