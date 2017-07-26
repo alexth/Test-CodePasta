@@ -29,7 +29,21 @@ class CreatePastaViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func savePasta(button: UIButton) {
-
+        // TODO: Add adequate validation
+        if let name = nameTextField.text,
+            let code = pastaTextView.text {
+            let isNameLongEnough = name.characters.count > 1
+            let isCodeLongEnough = code.characters.count > 1
+            if  isNameLongEnough || isCodeLongEnough {
+                let databaseManager = DatabaseManager.shared
+                databaseManager.createUpdatePasta(name: name,
+                                                  code: code,
+                                                  pastaID: "\(Int.randomInt(from: 0, to: 100000))", // TODO: test
+                                                  creationDate: Date()) // TODO: test
+            } else {
+                // TODO: Show error
+            }
+        }
     }
 
     @objc fileprivate func dismissKeyboard(recognizer: UITapGestureRecognizer) {
@@ -43,5 +57,17 @@ extension CreatePastaViewController: UITextFieldDelegate {
             pastaTextView.becomeFirstResponder()
         }
         return false
+    }
+}
+
+// TODO: Only for test purposes. Remove it
+fileprivate extension Int {
+    static func randomInt(from lower: Int, to higher: Int) -> Int {
+        var safeLower = lower
+        var safeHigher = higher
+        if safeLower > safeHigher {
+            swap(&safeLower, &safeHigher)
+        }
+        return Int(arc4random_uniform(UInt32(safeHigher - safeLower + 1))) + safeLower
     }
 }

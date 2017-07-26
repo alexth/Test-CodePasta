@@ -13,6 +13,7 @@ import PromiseKit
 extension DatabaseManager {
     @discardableResult
     func createUpdatePasta(name: String,
+                           code: String,
                            pastaID: String,
                            creationDate: Date) -> Promise<Pasta> {
         return Promise { (fulfill, reject) -> Void in
@@ -29,6 +30,7 @@ extension DatabaseManager {
                     pasta.creationDate = creationDate as NSDate
                 }
                 pasta.name = name
+                pasta.code = code
                 do {
                     try managedObjectContext.save()
                     fulfill(pasta)
