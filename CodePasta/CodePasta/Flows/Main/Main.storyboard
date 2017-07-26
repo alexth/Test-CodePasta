@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Pasta View Controller-->
+        <!--Create Pasta!-->
         <scene sceneID="Ys3-L5-vyd">
             <objects>
                 <viewController storyboardIdentifier="CreatePastaViewController" id="NzH-dl-4CT" customClass="CreatePastaViewController" customModule="CodePasta" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                             <constraint firstItem="vUS-q0-NBe" firstAttribute="top" secondItem="sWV-5J-Hor" secondAttribute="bottom" constant="8" id="ygJ-9c-rch"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5HE-pl-gV9">
+                    <navigationItem key="navigationItem" title="Create Pasta!" id="5HE-pl-gV9">
                         <barButtonItem key="leftBarButtonItem" title="Save" id="v1U-hR-XLK">
                             <connections>
                                 <action selector="savePastaWithButton:" destination="NzH-dl-4CT" id="ea8-pu-sFQ"/>
