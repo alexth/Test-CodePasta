@@ -34,6 +34,7 @@
 		E5B922451F28AB3D001ED0A4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5B922441F28AB3D001ED0A4 /* Login.storyboard */; };
 		E5B922471F28B7C5001ED0A4 /* APIPasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922461F28B7C5001ED0A4 /* APIPasta.swift */; };
 		E5B9224A1F28B94B001ED0A4 /* DatabaseManager+Pasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */; };
+		E5B9224D1F28CBF7001ED0A4 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B9224C1F28CBF7001ED0A4 /* ToastManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		E5B922441F28AB3D001ED0A4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E5B922461F28B7C5001ED0A4 /* APIPasta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPasta.swift; sourceTree = "<group>"; };
 		E5B922491F28B94B001ED0A4 /* DatabaseManager+Pasta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DatabaseManager+Pasta.swift"; path = "DatabaseManager+Pasta/DatabaseManager+Pasta.swift"; sourceTree = "<group>"; };
+		E5B9224C1F28CBF7001ED0A4 /* ToastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 		E5B9224B1F28CB0F001ED0A4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E5B9224C1F28CBF7001ED0A4 /* ToastManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				E5B9224A1F28B94B001ED0A4 /* DatabaseManager+Pasta.swift in Sources */,
 				E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */,
 				E51282E31F28759A00D2D1A5 /* CreatePastaViewController.swift in Sources */,
+				E5B9224D1F28CBF7001ED0A4 /* ToastManager.swift in Sources */,
 				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
 				E5B9223F1F28842C001ED0A4 /* APIUser.swift in Sources */,
 				E5B922471F28B7C5001ED0A4 /* APIPasta.swift in Sources */,
