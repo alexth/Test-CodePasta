@@ -9,27 +9,39 @@
 import UIKit
 
 class CreatePastaViewController: UIViewController {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var pastaTextView: UITextView!
+    @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
+
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(recognizer:)))
+        view.addGestureRecognizer(gestureRecognizer)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        nameTextField.becomeFirstResponder()
     }
 
+    // MARK: - Actions
 
-    /*
-    // MARK: - Navigation
+    @IBAction func savePasta(button: UIButton) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+    @objc fileprivate func dismissKeyboard(recognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+}
+
+extension CreatePastaViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTextField {
+            pastaTextView.becomeFirstResponder()
+        }
+        return false
+    }
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,9 +21,46 @@
                     <view key="view" contentMode="scaleToFill" id="jSE-pO-MdV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Give new Pasta a name!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWV-5J-Hor">
+                                <rect key="frame" x="16" y="78" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="J9l-IU-vZO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NzH-dl-4CT" id="kcq-uo-ej1"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vUS-q0-NBe">
+                                <rect key="frame" x="16" y="116" width="343" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NzH-dl-4CT" id="VJN-73-T41"/>
+                                </connections>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="vUS-q0-NBe" secondAttribute="bottom" constant="20" id="3Yi-Si-0ad"/>
+                            <constraint firstItem="sWV-5J-Hor" firstAttribute="trailing" secondItem="jSE-pO-MdV" secondAttribute="trailingMargin" id="4mt-tJ-B28"/>
+                            <constraint firstItem="sWV-5J-Hor" firstAttribute="leading" secondItem="jSE-pO-MdV" secondAttribute="leadingMargin" id="MrU-Pu-jev"/>
+                            <constraint firstItem="vUS-q0-NBe" firstAttribute="leading" secondItem="jSE-pO-MdV" secondAttribute="leadingMargin" id="OGi-Lc-69g"/>
+                            <constraint firstItem="vUS-q0-NBe" firstAttribute="trailing" secondItem="jSE-pO-MdV" secondAttribute="trailingMargin" id="QxU-XB-0Qm"/>
+                            <constraint firstItem="sWV-5J-Hor" firstAttribute="top" secondItem="ULi-Zq-jU7" secondAttribute="bottom" constant="14" id="Z5b-kr-UeB"/>
+                            <constraint firstItem="vUS-q0-NBe" firstAttribute="top" secondItem="sWV-5J-Hor" secondAttribute="bottom" constant="8" id="ygJ-9c-rch"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5HE-pl-gV9"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="sWV-5J-Hor" id="aTV-rd-bU5"/>
+                        <outlet property="pastaTextView" destination="vUS-q0-NBe" id="xaA-lX-vnO"/>
+                        <outlet property="textViewBottomConstraint" destination="3Yi-Si-0ad" id="sxr-Pe-x9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPu-Kr-9z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
