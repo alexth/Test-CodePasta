@@ -60,6 +60,7 @@ extension FeedViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: dictionaryCellIdentifier, for: indexPath) 
         let pasta = pastasArray[indexPath.row]
         cell.textLabel?.text = pasta.name
+        cell.detailTextLabel?.text = pasta.code
         return cell
     }
 }
