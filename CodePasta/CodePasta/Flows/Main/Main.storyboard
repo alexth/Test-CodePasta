@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="feedCell" id="O3Q-dl-QeR">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="O3Q-dl-QeR" id="4Y5-O2-Xfw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -102,11 +102,11 @@
             </objects>
             <point key="canvasLocation" x="-1238" y="21"/>
         </scene>
-        <!--Item 1-->
+        <!--Feed-->
         <scene sceneID="avl-N3-8Sa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jx9-HP-jaC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Jmb-yQ-8WP"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="Jmb-yQ-8WP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ecQ-Eb-Ccp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -121,11 +121,11 @@
             </objects>
             <point key="canvasLocation" x="532" y="-305.39730134932535"/>
         </scene>
-        <!--Item 2-->
+        <!--Create Pasta-->
         <scene sceneID="brw-fA-BWu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RXf-ZL-hAw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ipH-NB-G5s"/>
+                    <tabBarItem key="tabBarItem" title="Create Pasta" id="ipH-NB-G5s"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2fD-3p-fje">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
