@@ -13,12 +13,15 @@ class CreatePastaViewController: UIViewController, ToastViewDelegate {
     @IBOutlet weak var pastaTextView: UITextView!
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
 
+    fileprivate let animationDuration: TimeInterval = 0.3
+    fileprivate let textViewBottomConstraintHeight: CGFloat = 20.0
+
     // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(recognizer:)))
-        view.addGestureRecognizer(gestureRecognizer)
+        addTapGestureToBackground()
+        addKeyboardObservers()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -30,7 +33,7 @@ class CreatePastaViewController: UIViewController, ToastViewDelegate {
 
     @IBAction func savePasta(button: UIButton) {
         if let name = nameTextField.text,
-            let code = pastaTextView.text {
+        let code = pastaTextView.text {
             savePasta(name: name, code: code)
         } else {
             showError(text: "Nothing to save")
@@ -64,12 +67,31 @@ class CreatePastaViewController: UIViewController, ToastViewDelegate {
             self.view.endEditing(true)
             self.showInfo(text: "Saved!")
         } else {
-            showError(text: "Saving Pasta error")
+            showError(text: "Nothing to save")
         }
     }
 
+    // MARK: - Utils
+
     @objc fileprivate func dismissKeyboard(recognizer: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+
+    private func addTapGestureToBackground() {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(recognizer:)))
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+
+    private func addKeyboardObservers() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self,
+                                       selector: #selector(keyboardWillHide(notification:)),
+                                       name:NSNotification.Name.UIKeyboardWillHide,
+                                       object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(keyboardWillShow(notification:)),
+                                       name:NSNotification.Name.UIKeyboardWillShow,
+                                       object: nil)
     }
 }
 
@@ -79,6 +101,23 @@ extension CreatePastaViewController: UITextFieldDelegate {
             pastaTextView.becomeFirstResponder()
         }
         return false
+    }
+}
+
+extension CreatePastaViewController {
+    @objc fileprivate func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: animationDuration) {
+            self.textViewBottomConstraint.constant = self.textViewBottomConstraintHeight
+        }
+    }
+
+    @objc fileprivate func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        UIView.animate(withDuration: animationDuration) {
+            self.textViewBottomConstraint.constant = keyboardSize.height + 10.0
+        }
     }
 }
 
