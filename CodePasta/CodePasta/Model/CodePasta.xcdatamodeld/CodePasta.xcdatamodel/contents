@@ -9,6 +9,7 @@
     <entity name="Pasta" representedClassName="Pasta" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="pastaID" attributeType="String" syncable="YES"/>
         <attribute name="updateDate" attributeType="String" syncable="YES"/>
         <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" inverseName="pasta" inverseEntity="Comment" syncable="YES"/>
@@ -21,8 +22,8 @@
         <relationship name="pastas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pasta" inverseName="user" inverseEntity="Pasta" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-270" positionY="-72" width="128" height="103"/>
-        <element name="Pasta" positionX="-63" positionY="-102" width="128" height="133"/>
         <element name="Comment" positionX="153" positionY="-72" width="128" height="103"/>
+        <element name="Pasta" positionX="-63" positionY="-102" width="128" height="150"/>
+        <element name="User" positionX="-270" positionY="-72" width="128" height="103"/>
     </elements>
 </model>

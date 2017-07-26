@@ -17,6 +17,7 @@ extension Pasta {
     }
 
     @NSManaged public var pastaID: String?
+    @NSManaged public var name: String?
     @NSManaged public var creationDate: NSDate?
     @NSManaged public var updateDate: String?
     @NSManaged public var code: String?
