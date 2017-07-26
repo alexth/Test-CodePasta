@@ -7,17 +7,18 @@
 //
 
 import Foundation
+import PromiseKit
 
 protocol APIUser: APIJSON {
     func login(withName name: String,
                email: String,
-               password: String) -> [String : AnyObject]
+               password: String) -> Promise<[String : AnyObject]>
 }
 
 extension APIUser {
     func login(withName name: String,
                email: String,
-               password: String) -> [String : AnyObject]{
+               password: String) -> Promise<[String : AnyObject]>{
         let POSTUserDataDictionary = ["name": name,
                               "email": email,
                               "password": password]
