@@ -15,6 +15,7 @@
 		E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */; };
 		E51282B31F2865E400D2D1A5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51282B21F2865E400D2D1A5 /* Login.storyboard */; };
 		E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282B41F28665D00D2D1A5 /* LoginViewController.swift */; };
+		E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E51282AF1F2864FA00D2D1A5 /* CodePasta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodePasta.xcdatamodel; sourceTree = "<group>"; };
 		E51282B21F2865E400D2D1A5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E51282B41F28665D00D2D1A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */,
+				E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */,
 				E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */,
 				E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */,
 				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
