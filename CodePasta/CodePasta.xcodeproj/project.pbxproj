@@ -16,6 +16,12 @@
 		E51282B31F2865E400D2D1A5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51282B21F2865E400D2D1A5 /* Login.storyboard */; };
 		E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282B41F28665D00D2D1A5 /* LoginViewController.swift */; };
 		E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */; };
+		E51282D71F28722F00D2D1A5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D11F28722F00D2D1A5 /* User+CoreDataClass.swift */; };
+		E51282D81F28722F00D2D1A5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D21F28722F00D2D1A5 /* User+CoreDataProperties.swift */; };
+		E51282D91F28722F00D2D1A5 /* Pasta+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D31F28722F00D2D1A5 /* Pasta+CoreDataClass.swift */; };
+		E51282DA1F28722F00D2D1A5 /* Pasta+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D41F28722F00D2D1A5 /* Pasta+CoreDataProperties.swift */; };
+		E51282DB1F28722F00D2D1A5 /* Comment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D51F28722F00D2D1A5 /* Comment+CoreDataClass.swift */; };
+		E51282DC1F28722F00D2D1A5 /* Comment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282D61F28722F00D2D1A5 /* Comment+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		E51282B21F2865E400D2D1A5 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E51282B41F28665D00D2D1A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		E51282D11F28722F00D2D1A5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E51282D21F28722F00D2D1A5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E51282D31F28722F00D2D1A5 /* Pasta+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pasta+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E51282D41F28722F00D2D1A5 /* Pasta+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pasta+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E51282D51F28722F00D2D1A5 /* Comment+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E51282D61F28722F00D2D1A5 /* Comment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comment+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +150,7 @@
 		E51282AB1F28639D00D2D1A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E51282B81F28711600D2D1A5 /* Entities */,
 				E51282AE1F2864FA00D2D1A5 /* CodePasta.xcdatamodeld */,
 				E51282B61F286BC200D2D1A5 /* DatabaseManager.swift */,
 			);
@@ -169,6 +182,19 @@
 				E51282B41F28665D00D2D1A5 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E51282B81F28711600D2D1A5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E51282D11F28722F00D2D1A5 /* User+CoreDataClass.swift */,
+				E51282D21F28722F00D2D1A5 /* User+CoreDataProperties.swift */,
+				E51282D31F28722F00D2D1A5 /* Pasta+CoreDataClass.swift */,
+				E51282D41F28722F00D2D1A5 /* Pasta+CoreDataProperties.swift */,
+				E51282D51F28722F00D2D1A5 /* Comment+CoreDataClass.swift */,
+				E51282D61F28722F00D2D1A5 /* Comment+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,10 +334,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51282DB1F28722F00D2D1A5 /* Comment+CoreDataClass.swift in Sources */,
 				E51282B71F286BC200D2D1A5 /* DatabaseManager.swift in Sources */,
 				E51282B51F28665D00D2D1A5 /* LoginViewController.swift in Sources */,
+				E51282D81F28722F00D2D1A5 /* User+CoreDataProperties.swift in Sources */,
+				E51282DC1F28722F00D2D1A5 /* Comment+CoreDataProperties.swift in Sources */,
 				E512827A1F28608900D2D1A5 /* AppDelegate.swift in Sources */,
 				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
+				E51282DA1F28722F00D2D1A5 /* Pasta+CoreDataProperties.swift in Sources */,
+				E51282D91F28722F00D2D1A5 /* Pasta+CoreDataClass.swift in Sources */,
+				E51282D71F28722F00D2D1A5 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
