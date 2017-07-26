@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="em4-Yg-aGz">
             <objects>
-                <viewController id="eRM-TC-b8K" customClass="LoginViewController" customModule="CodePasta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="eRM-TC-b8K" customClass="LoginViewController" customModule="CodePasta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N4f-py-j7I"/>
                         <viewControllerLayoutGuide type="bottom" id="8ta-z0-JLY"/>
