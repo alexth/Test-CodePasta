@@ -26,6 +26,7 @@
 		E51282E11F2874F800D2D1A5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282E01F2874F800D2D1A5 /* FeedViewController.swift */; };
 		E51282E31F28759A00D2D1A5 /* CreatePastaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282E21F28759A00D2D1A5 /* CreatePastaViewController.swift */; };
 		E51282E61F2879D700D2D1A5 /* DatabaseManager+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51282E51F2879D700D2D1A5 /* DatabaseManager+User.swift */; };
+		E5B9223A1F288367001ED0A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B922391F288367001ED0A4 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E51282E01F2874F800D2D1A5 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E51282E21F28759A00D2D1A5 /* CreatePastaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePastaViewController.swift; sourceTree = "<group>"; };
 		E51282E51F2879D700D2D1A5 /* DatabaseManager+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DatabaseManager+User.swift"; sourceTree = "<group>"; };
+		E5B922391F288367001ED0A4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		E51282AA1F28637A00D2D1A5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5B922391F288367001ED0A4 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				E51282B01F2864FA00D2D1A5 /* CodePasta.xcdatamodeld in Sources */,
 				E51282E11F2874F800D2D1A5 /* FeedViewController.swift in Sources */,
 				E51282E61F2879D700D2D1A5 /* DatabaseManager+User.swift in Sources */,
+				E5B9223A1F288367001ED0A4 /* NetworkManager.swift in Sources */,
 				E51282DA1F28722F00D2D1A5 /* Pasta+CoreDataProperties.swift in Sources */,
 				E51282D91F28722F00D2D1A5 /* Pasta+CoreDataClass.swift in Sources */,
 				E51282D71F28722F00D2D1A5 /* User+CoreDataClass.swift in Sources */,
@@ -621,6 +625,7 @@
 				E51282A31F28608A00D2D1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E51282A41F28608A00D2D1A5 /* Build configuration list for PBXNativeTarget "CodePastaTests" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +634,7 @@
 				E51282A61F28608A00D2D1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E51282A71F28608A00D2D1A5 /* Build configuration list for PBXNativeTarget "CodePastaUITests" */ = {
 			isa = XCConfigurationList;
@@ -637,6 +643,7 @@
 				E51282A91F28608A00D2D1A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
