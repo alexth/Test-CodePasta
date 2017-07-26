@@ -11,16 +11,16 @@ import PromiseKit
 
 protocol APIPasta: APIJSON {
     func sendPasta(name: String,
-                   text: String,
+                   code: String,
                    creationDate: Date) -> Promise<[String : AnyObject]>
 }
 
 extension APIPasta {
     func sendPasta(name: String,
-                   text: String,
+                   code: String,
                    creationDate: Date) -> Promise<[String : AnyObject]> {
         let POSTPastaDictionary = ["name": name,
-                                   "text": text,
+                                   "code": code,
                                    "creationDate": creationDate] as [String : AnyObject]
         return postRequest(data: POSTPastaDictionary)
     }

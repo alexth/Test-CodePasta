@@ -55,7 +55,18 @@
                             <constraint firstItem="vUS-q0-NBe" firstAttribute="top" secondItem="sWV-5J-Hor" secondAttribute="bottom" constant="8" id="ygJ-9c-rch"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5HE-pl-gV9"/>
+                    <navigationItem key="navigationItem" id="5HE-pl-gV9">
+                        <barButtonItem key="leftBarButtonItem" title="Save" id="v1U-hR-XLK">
+                            <connections>
+                                <action selector="savePastaWithButton:" destination="NzH-dl-4CT" id="ea8-pu-sFQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="AIE-2s-19W">
+                            <connections>
+                                <action selector="sharePastaWithButton:" destination="NzH-dl-4CT" id="55h-Gm-09t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="sWV-5J-Hor" id="aTV-rd-bU5"/>
                         <outlet property="pastaTextView" destination="vUS-q0-NBe" id="xaA-lX-vnO"/>

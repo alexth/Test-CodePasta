@@ -29,20 +29,43 @@ class CreatePastaViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func savePasta(button: UIButton) {
-        // TODO: Add adequate validation
         if let name = nameTextField.text,
             let code = pastaTextView.text {
-            let isNameLongEnough = name.characters.count > 1
-            let isCodeLongEnough = code.characters.count > 1
-            if  isNameLongEnough || isCodeLongEnough {
-                let databaseManager = DatabaseManager.shared
-                databaseManager.createUpdatePasta(name: name,
-                                                  code: code,
-                                                  pastaID: "\(Int.randomInt(from: 0, to: 100000))", // TODO: test
-                                                  creationDate: Date()) // TODO: test
-            } else {
-                // TODO: Show error
-            }
+            savePasta(name: name, code: code)
+        } else {
+            //TODO: Add error handling
+        }
+    }
+
+    @IBAction func sharePasta(button: UIButton) {
+        let networkManager = NetworkManager.shared
+        let name = nameTextField.text ?? ""
+        let code = pastaTextView.text ?? ""
+        let creationDate = Date() // TODO: Only for test purposes
+        networkManager.sendPasta(name: name,
+                                 code: code,
+                                 creationDate: creationDate).then { response -> Void in
+                                    self.savePasta(name: name, code: code)
+        }.catch { error in
+            //TODO: Add adequate error handling
+            print(error)
+        }
+    }
+
+    private func savePasta(name: String, code: String) {
+        // TODO: Add adequate validation
+        let isNameLongEnough = name.characters.count > 1
+        let isCodeLongEnough = code.characters.count > 1
+        if  isNameLongEnough || isCodeLongEnough {
+            let databaseManager = DatabaseManager.shared
+            databaseManager.createUpdatePasta(name: name,
+                                              code: code,
+                                              pastaID: "\(Int.randomInt(from: 0, to: 100000))", // TODO: test
+                creationDate: Date()) // TODO: test
+            self.view.endEditing(true)
+            // TODO: Show success save
+        } else {
+            // TODO: Show error
         }
     }
 

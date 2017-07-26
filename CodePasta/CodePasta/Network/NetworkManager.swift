@@ -14,7 +14,7 @@ class NetworkManager {
     fileprivate init() {}
 }
 
-extension NetworkManager: APIUser {}
+extension NetworkManager: APIUser, APIPasta {}
 
 protocol APIJSON {
     func postRequest(data: [String : AnyObject]) -> Promise<[String : AnyObject]>
