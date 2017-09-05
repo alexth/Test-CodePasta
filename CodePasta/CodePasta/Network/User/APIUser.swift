@@ -20,8 +20,8 @@ extension APIUser {
                email: String,
                password: String) -> Promise<[String : AnyObject]>{
         let POSTUserDataDictionary = ["name": name,
-                              "email": email,
-                              "password": password]
+                                      "email": email,
+                                      "password": password]
         return postRequest(data: POSTUserDataDictionary as [String : AnyObject])
     }
 }

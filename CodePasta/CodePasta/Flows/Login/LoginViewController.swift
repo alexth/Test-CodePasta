@@ -30,19 +30,19 @@ class LoginViewController: UIViewController {
                                  password: String!) {
         // TODO: Disabled until API will be available
 
-//        let userAPI: APIUser = NetworkManager.shared
-//        userAPI.login(withName: name,
-//                      email: email,
-//                      password: password).then { responseDictionary -> Void in
-//                        self.handleSuccessLogin(response: responseDictionary)
-//        }.catch { error in
-//            self.handle(error: error)
-//        }
+        let userAPI: APIUser = NetworkManager.shared
+        userAPI.login(withName: name,
+                      email: email,
+                      password: password).then { responseDictionary -> Void in
+                        self.handleSuccessLogin(response: responseDictionary)
+        }.catch { error in
+            self.handle(error: error)
+        }
         // TODO: Only for test purposes, need to be removed ⬇︎
-        let testResponse = ["name" : name,
-                            "id" : "userID",
-                            "creationDate" : Date()] as [String : AnyObject]
-        self.handleSuccessLogin(response: testResponse)
+//        let testResponse = ["name" : name,
+//                            "id" : "userID",
+//                            "creationDate" : Date()] as [String : AnyObject]
+//        self.handleSuccessLogin(response: testResponse)
     }
 
     fileprivate func handleSuccessLogin(response: [String : AnyObject]) {
